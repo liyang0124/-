@@ -11,8 +11,8 @@
 （2）第二步一般是使用一个softmax函数对这些权重进行归一化，转换为注意力；
 
 （3）第三步将权重和相应的键值value进行**加权求和**得到最后的attention。
+![image](https://user-images.githubusercontent.com/82817917/163113310-5295a36a-99e0-4601-a096-1e67aa8c0962.png)
 
-![v2-470ee9b60602fb151b6d4abf63b49772_r](C:\Users\ly\Desktop\李阳\v2-470ee9b60602fb151b6d4abf63b49772_r.jpg)
 
 自注意力是基于特征图本身的关注而提取的注意力。对于卷积而言，卷积核的设置限制了感受野的大小，导致网络往往需要多层的堆叠才能关注到整个特征图。而自注意的优势就是它的关注是全局的，它能通过简单的查询与赋值就能获取到特征图的全局空间信息。
 
@@ -32,7 +32,7 @@
 
 #### 2.1.SENet
 
-![image-20220413124832060](C:\Users\ly\AppData\Roaming\Typora\typora-user-images\image-20220413124832060.png)
+![image](https://user-images.githubusercontent.com/82817917/163113356-7d852dd7-92b5-4388-a6e9-29619334dd00.png)
 
 分三个部分：
 
@@ -44,7 +44,7 @@
 
 #### 2.2.SKNet
 
-![image-20220413133509957](C:\Users\ly\AppData\Roaming\Typora\typora-user-images\image-20220413133509957.png)
+![image](https://user-images.githubusercontent.com/82817917/163113377-b4348583-a310-4e1c-917d-3150acc67429.png)
 
 主要创新点是设置了一组动态选择的卷积，分为三个部分操作Split、Fuse、Select。
 
@@ -62,4 +62,4 @@
 
 CBAM 和Non-local 的融合变形。具体来说就是，结构框架使用的是CBAM，具体方法使用的是self-attention。
 
-![image-20220413133950852](C:\Users\ly\AppData\Roaming\Typora\typora-user-images\image-20220413133950852.png)
+![image](https://user-images.githubusercontent.com/82817917/163113407-7624da0b-8758-4fb6-a2a8-36c1ac7edcde.png)
